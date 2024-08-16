@@ -1,0 +1,33 @@
+@use "../../Global.scss" as *;
+
+
+.headerContainer{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('../../assets/1-nastuh-abootalebi.jpg');
+    background-size: cover;
+    header{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        margin: 8rem 9rem 40rem; //OBS!!
+        h1{
+            font-size: 8rem;
+        }
+        h1, span{
+            font-family: $font-jura;
+            font-weight: 400;
+        }
+
+        span{
+            color: $primary-color;
+        }
+    
+        h4{
+            font-family: $font-inter;
+            font-weight: 300;
+            font-size: 1rem;
+            margin: -1rem 0 0 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "../../Global.scss" as *;
+
+*{
+    font-family: $font-inter;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.5rem solid $primary-color;
+    position: fixed;
+    background-color: $page-color;
+    width: 100%;
+    padding: 0.5rem 0;
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding-left: 3rem;
+        li{
+            border-right: 1px solid $primary-color;
+            color: $primary-color;
+            font-size: 12px;
+            padding: 0 5px;
+            text-align: center;
+            align-self: center;
+        }
+    }
+    li:last-child{
+        border: none;
+    }
+    h3{
+        font-family: $font-jura;
+        font-weight: 400;
+        font-size: 2rem;
+        padding-right: 3rem;
+        span{
+            font-family: $font-jura;
+            font-weight: 400;
+            color: $primary-color;
+        }
+    }
+}
