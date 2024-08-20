@@ -11,6 +11,8 @@ import { AboutText } from './components/About/AboutBody/AboutBody'
 import { Team } from './components/Team/Team'
 import { TeamHeader } from './components/Team/TeamHeader/TeamHeader'
 import { TeamBody } from './components/Team/TeamBody/TeamBody'
+import { Map } from './components/Map/Map'
+import { Footer } from './components/Footer/Footer'
 
 const cardsArray = [
   {
@@ -66,9 +68,9 @@ const teamArray = [
 
 const mapArray = [
   {
-    'Title1': 'INTET PROBLEM',
-    'TextContent1': 'Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.',
-    'TextContent2': 'Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!',
+    'Title1': 'HER BOR VI',
+    'TextContent1': 'Vi har valgt at bosætte os i solen!',
+    'TextContent2': 'Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. ',
     'Title2': 'EVIG GARANTI',
   },
 
@@ -113,16 +115,17 @@ function App() {
           </Team>
         ))}
       </Section>
-
       <Section>
-        {aboutArray.map((item) => (
+        {mapArray.map((item) => (
           <About layout='sectionMap' key={item.Title1}>
             <AboutHeader title={item.Title1}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
+            <Map></Map>
           </About>
         ))}
       </Section>
+      <Footer></Footer>
     </>
   )
 }

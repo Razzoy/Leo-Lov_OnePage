@@ -1,0 +1,11 @@
+@use "../../Global.scss" as *;
+
+.mapContainer{
+    ul{
+        margin-top: 4rem;
+        list-style: none;
+        li{
+            font-family: $font-jura;
+        }
+    }
+}

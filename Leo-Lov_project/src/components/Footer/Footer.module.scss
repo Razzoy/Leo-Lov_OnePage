@@ -1,0 +1,39 @@
+@use "../../Global.scss" as *;
+
+.footerContainer {
+    background-color: $secondary-color;
+    margin-top: 10rem;
+    color: $page-color;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem 0;
+
+    h3 {
+        font-family: $font-jura;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+
+            &:nth-of-type(1) {
+                margin: 1rem 0;
+            }
+        }
+    }
+
+}
+
+.mediaLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    img {
+        width: 3rem;
+        height: auto;
+    }
+}
