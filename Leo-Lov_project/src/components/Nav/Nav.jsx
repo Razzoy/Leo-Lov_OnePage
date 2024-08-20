@@ -7,10 +7,10 @@ export function Nav() {
     <>
       <nav className={style.navBar}>
         <ul>
-          <li>Hjem</li>
-          <li>Advokaterne</li>
-          <li>Om LeoLov</li>
-          <li>Kontakt</li>
+          <li><a href='#home'>Hjem</a></li>
+          <li><a href='#about'>Om LeoLov</a></li>
+          <li><a href='#lawyer'>Advokaterne</a></li>
+          <li><a href='#contact'>Kontakt</a></li>
         </ul>
         <h3><span>Leo-</span>Lov</h3>
       </nav>

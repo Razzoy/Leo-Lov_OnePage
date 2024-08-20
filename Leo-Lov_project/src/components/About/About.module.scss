@@ -1,0 +1,49 @@
+@use "../../Global.scss" as *;
+
+.aboutStyle {
+    border: 0.5rem solid $secondary-color;
+    display: flex;
+
+
+    .image {
+        background-image: url('../../assets/2-brock-wegner.jpg');
+        background-size: cover;
+        background-position: 20%;
+        border-right: 0.25rem solid $secondary-color;
+        width: 180rem;
+    }
+
+    article{
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 4rem 10rem;
+        border-left: 0.25rem solid $secondary-color;
+        h3{
+            font-family: $font-jura;
+            font-weight: 400;
+            color: $primary-color;
+            text-align: center;
+            font-size: 2.5vw;
+        }
+        p{
+            font-size: 1.3vw;
+            margin-top: 3rem;
+        }
+    }
+}
+
+.reverseFlex{
+    flex-direction: row-reverse;
+
+    .image{
+        background-image: url('../../assets/3-armando-arauz.jpg');
+        border: none;
+        border-left: 0.25rem solid $secondary-color;
+    }
+
+    article{
+        border: none;
+        border-right: 0.25rem solid $secondary-color;
+    }
+}
+

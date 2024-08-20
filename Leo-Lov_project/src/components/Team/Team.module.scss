@@ -1,0 +1,18 @@
+@use "../../Global.scss" as *;
+
+.teamContainer {
+
+
+    .teamCards {
+        box-shadow: 2px 2px 10px #00000055;
+        border-radius: 0.6rem;
+        font-family: sans-serif;
+        max-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        background-color: $page-color;
+        max-width: 14rem;
+        height: 20rem;
+        padding: 1rem;
+    }
+}

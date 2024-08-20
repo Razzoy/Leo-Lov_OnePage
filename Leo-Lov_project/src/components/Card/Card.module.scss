@@ -1,13 +1,14 @@
 @use "../../Global.scss" as *;
 
 .cardContainer{
-    box-shadow: 2px 2px 6px #000;
-    border-radius: 0.7rem;
+    box-shadow: 2px 2px 10px #00000055;
+    border-radius: 0.6rem;
     font-family: sans-serif;
     max-width: fit-content;
     display: flex;
     flex-direction: column;
-    width: 14rem;
+    background-color: $page-color;
+    max-width: 14rem;
     height: 20rem;
     padding: 1rem;
 
@@ -16,8 +17,13 @@
         font-weight: 400;
         color: $primary-color;
         text-align: center;
-        margin: 1rem 0;
-        font-size: 2rem;
+        margin-top: 2rem;
+        font-size: 2.5vw;
+    }
+    p{
+        margin-top: 6rem;
+        font-size: 1vw;
+        padding: 0 1.5rem;
     }
     :nth-child(3){
         height: 5rem;

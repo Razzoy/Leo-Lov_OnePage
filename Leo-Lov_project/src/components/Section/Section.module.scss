@@ -1,1 +1,24 @@
 @use "../../Global.scss" as *;
+
+.sectionStyle {
+    margin: 0 4.5rem;
+}
+
+.sectionCards {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    margin-top: -8rem;
+    margin-bottom: 5rem;
+}
+
+.sectionAbout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sectionTeam {
+    display: flex;
+    justify-content: space-between;
+}

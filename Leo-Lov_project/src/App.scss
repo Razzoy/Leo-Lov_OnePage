@@ -1,0 +1,16 @@
+@use "../src/Global.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    font-family: $font-inter;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+}
