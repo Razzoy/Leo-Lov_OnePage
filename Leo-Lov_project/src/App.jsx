@@ -9,7 +9,8 @@ import { About } from './components/About/About'
 import { AboutHeader } from './components/About/AboutHeader/AboutHeader'
 import { AboutText } from './components/About/AboutBody/AboutBody'
 import { Team } from './components/Team/Team'
-// import { Team}
+import { TeamHeader } from './components/Team/TeamHeader/TeamHeader'
+import { TeamBody } from './components/Team/TeamBody/TeamBody'
 
 const cardsArray = [
   {
@@ -37,7 +38,40 @@ const aboutArray = [
     'TextContent2': 'Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!',
     'Title2': 'EVIG GARANTI',
   },
-  
+
+]
+
+const teamArray = [
+  {
+    'Src': 'John Harbinger.png',
+    'Name': 'John Harbinger',
+    'TextContent': '”Jeg er den mest successfulde advokat i firmaet. I hvert fald mere end Peter.”',
+  },
+  {
+    'Src': 'Peter Parker.png',
+    'Name': 'Peter Parker',
+    'TextContent': '“Jeg holder af kaffe og så er jeg helt enormt succesfuld. Meget mere end John”',
+  },
+  {
+    'Src': 'Elise Li.png',
+    'Name': 'Elise Li',
+    'TextContent': '“Uden ret og lov, kunne vi ligeså godt bo i en skov. Sådan har jeg altid sagt.”',
+  },
+  {
+    'Src': 'Morten Nate.png',
+    'Name': 'Morten Nate',
+    'TextContent': '“Jeg er født på landet. På landet er der ingen ret og lov. Det er det vilde vest derude.”',
+  }
+]
+
+const mapArray = [
+  {
+    'Title1': 'INTET PROBLEM',
+    'TextContent1': 'Leo-lov har altid været det bedste advokatfirma i verden. Der er simpelthen ingen der kan måle sig med os. Vi kan løse alle problemer så længe du har penge. Hvis du mod alt forventning skulle oplevel at støde på et retsligt problem som leo-lov ikke kan løse får du halvdelen af beløbet igen.',
+    'TextContent2': 'Det er sådan vi har skabt en forretning der ikke kan andet end at vokse!',
+    'Title2': 'EVIG GARANTI',
+  },
+
 ]
 
 function App() {
@@ -47,33 +81,47 @@ function App() {
       <Nav />
       <Header />
       <Section layout='sectionCards'>
-      {cardsArray.map((item) => (
+        {cardsArray.map((item) => (
           <Card key={item.Title}>
             <CardHeader title={item.Title}></CardHeader>
             <CardBody bodyText={item.TextContent}></CardBody>
           </Card>
-      ))}
+        ))}
       </Section>
       <Section layout='sectionAbout'>
-      {aboutArray.map((item) => (
+        {aboutArray.map((item) => (
           <About key={item.Title1}>
             <AboutHeader title={item.Title1}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
           </About>
-      ))}
-      {aboutArray.map((item) => (
+        ))}
+        {aboutArray.map((item) => (
           <About layout='reverseFlex' key={item.Title2}>
             <AboutHeader title={item.Title2}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
           </About>
-      ))}
+        ))}
       </Section>
+      <h2 id='lawyer'>MØD HOLDET</h2>
       <Section layout='sectionTeam'>
-        <Team>
+        {teamArray.map((item) => (
+          <Team key={item.Title}>
+            <TeamHeader image = {item.Src}></TeamHeader>
+            <TeamBody header = {item.Name} text = {item.TextContent}></TeamBody>
+          </Team>
+        ))}
+      </Section>
 
-        </Team>
+      <Section>
+        {aboutArray.map((item) => (
+          <About layout='sectionMap' key={item.Title1}>
+            <AboutHeader title={item.Title1}></AboutHeader>
+            <AboutText bodyText={item.TextContent1}></AboutText>
+            <AboutText bodyText={item.TextContent2}></AboutText>
+          </About>
+        ))}
       </Section>
     </>
   )

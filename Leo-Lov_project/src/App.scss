@@ -14,3 +14,12 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
 }
+
+h2{
+    font-family: $font-jura;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $primary-color;
+    margin: 5rem 0;
+}
