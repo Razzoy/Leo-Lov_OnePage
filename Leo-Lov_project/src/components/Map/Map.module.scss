@@ -1,10 +1,11 @@
 @use "../../Global.scss" as *;
 
-.mapContainer{
-    ul{
+.mapContainer {
+    ul {
         margin-top: 4rem;
         list-style: none;
-        li{
+
+        li {
             font-family: $font-jura;
         }
     }

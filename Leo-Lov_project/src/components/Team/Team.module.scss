@@ -11,23 +11,27 @@
         padding: 1rem;
         border-bottom: 0.5rem solid $secondary-color;
         margin-bottom: 10rem;
-        img{
+
+        img {
             display: block;
             border-radius: 50%;
             border: 0.5rem solid $secondary-color;
         }
 
-        h4, p{
+        h4,
+        p {
             font-weight: 400;
             font-size: 14px;
             text-align: center;
             padding: 0 2rem;
         }
-        h4{
+
+        h4 {
             color: $primary-color;
             margin-top: 3rem;
         }
-        p{
+
+        p {
             margin-top: 1rem;
         }
     }

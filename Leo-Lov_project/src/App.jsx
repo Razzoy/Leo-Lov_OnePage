@@ -110,8 +110,8 @@ function App() {
       <Section layout='sectionTeam'>
         {teamArray.map((item) => (
           <Team key={item.Title}>
-            <TeamHeader image = {item.Src}></TeamHeader>
-            <TeamBody header = {item.Name} text = {item.TextContent}></TeamBody>
+            <TeamHeader image={item.Src}></TeamHeader>
+            <TeamBody header={item.Name} text={item.TextContent}></TeamBody>
           </Team>
         ))}
       </Section>

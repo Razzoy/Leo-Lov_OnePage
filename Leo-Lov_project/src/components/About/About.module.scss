@@ -13,54 +13,57 @@
         width: 180rem;
     }
 
-    article{
+    article {
         display: flex;
         flex-direction: column;
         padding: 4rem 4rem 10rem;
         border-left: 0.25rem solid $secondary-color;
-        h3{
+
+        h3 {
             font-family: $font-jura;
             font-weight: 400;
             color: $primary-color;
             text-align: center;
             font-size: 2rem;
         }
-        p{
+
+        p {
             font-size: 1rem;
             margin-top: 3rem;
         }
     }
 }
 
-.reverseFlex{
+.reverseFlex {
     flex-direction: row-reverse;
 
-    .image{
+    .image {
         background-image: url('../../assets/3-armando-arauz.jpg');
         border: none;
         border-left: 0.25rem solid $secondary-color;
     }
 
-    article{
+    article {
         border: none;
         border-right: 0.25rem solid $secondary-color;
     }
 }
 
-.sectionMap{
+.sectionMap {
     height: 30rem;
-    .image{
+
+    .image {
         background-image: url('../../assets/leolov-location.PNG');
         width: 55rem;
     }
 
-    article{
-        h3{
+    article {
+        h3 {
             margin: -1rem 0 1.5rem;
         }
-        p{
+
+        p {
             margin-top: 1rem;
         }
     }
 }
-
