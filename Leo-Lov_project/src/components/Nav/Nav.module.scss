@@ -1,7 +1,5 @@
 @use "../../Global.scss" as *;
 
-* {}
-
 .navBar {
     display: flex;
     flex-direction: row;
@@ -28,6 +26,13 @@
             a {
                 text-decoration: none;
                 color: $primary-color;
+                &:hover{
+                    background-color: $primary-color;
+                    transition: 200ms;
+                    cursor: pointer;
+                    color: white;
+                    border-radius: 5px;
+                }
             }
         }
     }
@@ -41,11 +46,46 @@
         font-weight: 400;
         font-size: 2rem;
         padding-right: 3rem;
+        align-self: center;
 
         span {
             font-family: $font-jura;
             font-weight: 400;
             color: $primary-color;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .navBar {
+        ul{
+            padding-left: 1rem;
+            li{
+                border-right: 2px solid $primary-color !important ;
+                &:last-child{
+                    border: none !important;
+                }
+            }
+        }
+        h3{
+            padding-right: 1rem;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .navBar {
+        justify-content: space-evenly;
+        border-bottom: 0.3rem solid $primary-color;
+        ul{
+            li{
+                a{
+                    padding: 0 0.5rem;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        h3{
+            display:none;
         }
     }
 }

@@ -7,6 +7,7 @@
 .sectionCards {
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
     z-index: 2;
     margin-top: -8rem;
     margin-bottom: 5rem;
@@ -21,4 +22,43 @@
 .sectionTeam {
     display: flex;
     justify-content: space-evenly;
+}
+
+@media (max-width: 900px) {
+    .sectionStyle {
+        margin: 0 5rem;
+    }
+    
+    .sectionCards {
+        margin-top: -5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .sectionAbout {
+        gap: 2rem;
+    }
+    
+    .sectionTeam {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+
+    .sectionCards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+    }
+
+    .sectionAbout {
+        gap: 1rem;
+    }
+
+    .sectionTeam {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 2rem;
+    }
 }

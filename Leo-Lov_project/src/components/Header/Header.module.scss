@@ -6,13 +6,12 @@
     justify-content: flex-end;
     background-image: url('../../assets/1-nastuh-abootalebi.jpg');
     background-size: cover;
+    padding: 4vw 7vw 47vw;
 
     header {
         display: flex;
         flex-direction: column;
         color: #fff;
-        margin: 8rem 9rem 40rem; //OBS!!
-
         h1 {
             font-size: 8rem;
         }
@@ -32,6 +31,53 @@
             font-weight: 300;
             font-size: 1rem;
             margin: -1rem 0 0 0.8rem;
+        }
+
+        .lineBreak{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    .headerContainer {
+        padding: 10vw 5vw 40vw;
+    
+        header {
+            h1 {
+                font-size: 5rem;
+            }
+    
+            h4 {
+                font-size: 0.6rem;
+                margin: -0.8rem 0 0 0.5rem;
+            }
+            .lineBreak{
+                display: none;
+            }
+        }
+    }
+
+}
+@media (max-width: 600px) {
+
+    .headerContainer {
+        padding: 10vw 5vw 40vw;
+    
+        header {
+            h1 {
+                font-size: 4.5rem;
+            }
+    
+            h4 {
+                text-align: center;
+                font-size: 0.7rem;
+                margin: -0.8rem 0 0 0.4rem;
+            }
+            .lineBreak{
+                display: block;
+            }
         }
     }
 }

@@ -68,10 +68,10 @@ const teamArray = [
 
 const mapArray = [
   {
-    'Title1': 'HER BOR VI',
+    'MapTitle1': 'HER BOR VI',
     'TextContent1': 'Vi har valgt at bosætte os i solen!',
     'TextContent2': 'Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. ',
-    'Title2': 'EVIG GARANTI',
+    'MapTitle2': 'EVIG GARANTI',
   },
 
 ]
@@ -109,7 +109,7 @@ function App() {
       <h2 id='lawyer'>MØD HOLDET</h2>
       <Section layout='sectionTeam'>
         {teamArray.map((item) => (
-          <Team key={item.Title}>
+          <Team key={item.Src}>
             <TeamHeader image={item.Src}></TeamHeader>
             <TeamBody header={item.Name} text={item.TextContent}></TeamBody>
           </Team>
@@ -117,8 +117,8 @@ function App() {
       </Section>
       <Section>
         {mapArray.map((item) => (
-          <About layout='sectionMap' key={item.Title1}>
-            <AboutHeader title={item.Title1}></AboutHeader>
+          <About layout='sectionMap' key={item.MapTitle1}>
+            <AboutHeader title={item.MapTitle1}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
             <Map></Map>

@@ -3,19 +3,20 @@
 .teamContainer {
     .teamCards {
         font-family: sans-serif;
-        max-width: fit-content;
         display: flex;
         flex-direction: column;
-        max-width: 14rem;
+        max-width: 14vw;
         height: 24rem;
         padding: 1rem;
         border-bottom: 0.5rem solid $secondary-color;
         margin-bottom: 10rem;
 
         img {
+            width: 15vw;
             display: block;
             border-radius: 50%;
             border: 0.5rem solid $secondary-color;
+            align-self: center;
         }
 
         h4,
@@ -34,5 +35,43 @@
         p {
             margin-top: 1rem;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .teamCards {
+        max-width: fit-content !important;
+        margin-bottom: 2rem !important;
+
+        img {
+            width: 80% !important;
+
+        }
+
+        h4,
+        p {
+            font-size: 1rem !important;
+            margin: 1rem 0 !important;
+        }
+
+        h4 {
+            color: $primary-color;
+            margin-top: 3rem;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+    }
+
+}
+@media (max-width: 600px) {
+    .teamCards {
+        margin-bottom: 1rem !important;
+
+        img {
+            width: 70% !important;
+        }
+
     }
 }

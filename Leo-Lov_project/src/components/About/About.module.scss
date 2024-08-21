@@ -4,7 +4,6 @@
     border: 0.5rem solid $secondary-color;
     display: flex;
 
-
     .image {
         background-image: url('../../assets/2-brock-wegner.jpg');
         background-size: cover;
@@ -66,4 +65,46 @@
             margin-top: 1rem;
         }
     }
+}
+
+@media (max-width: 900px) {
+
+    .aboutStyle {
+        flex-direction: column;
+
+        .image {
+            width: 100%;
+            height: 30vh;
+            border: none;
+        }
+
+        article {
+            border: none;
+            padding: 2rem 3rem;
+
+            h3 {
+                font-size: 1.7rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .sectionMap {
+        height: 100%;
+
+        article {
+            h3 {
+                margin: 0rem 0 1rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+
 }

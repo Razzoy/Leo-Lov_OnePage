@@ -10,3 +10,17 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .mapContainer {
+        ul {
+            margin-top: 2rem;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 600px) {
+
+}
