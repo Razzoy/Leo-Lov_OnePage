@@ -29,9 +29,12 @@
         margin: 0 5rem;
     }
     
-    .sectionCards {
+    .sectionCards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
         margin-top: -5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     
     .sectionAbout {
@@ -47,10 +50,8 @@
 @media (max-width: 600px) {
 
     .sectionCards{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: -5rem;
-        margin-bottom: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: -5.5rem;
     }
 
     .sectionAbout {
