@@ -40,8 +40,8 @@
 
 @media (max-width: 900px) {
     .teamCards {
-        max-width: fit-content !important;
-        margin-bottom: 2rem !important;
+        max-width: 30vw !important;
+        margin: 0 auto 2rem !important;
 
         img {
             width: 80% !important;
@@ -67,10 +67,11 @@
 }
 @media (max-width: 600px) {
     .teamCards {
-        margin-bottom: 1rem !important;
-
+        max-width: 50vw !important;
+        margin: 0 auto 2rem !important;
+        height: 26rem !important;
         img {
-            width: 70% !important;
+            width: 100% !important;
         }
 
     }
