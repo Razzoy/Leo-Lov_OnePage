@@ -13,6 +13,9 @@ import { TeamHeader } from './components/Team/TeamHeader/TeamHeader'
 import { TeamBody } from './components/Team/TeamBody/TeamBody'
 import { Map } from './components/Map/Map'
 import { Footer } from './components/Footer/Footer'
+import { Wrapper } from './Wrapper/Wrapper'
+import {ThemeContext} from './context/ThemeContext'
+import { useContext } from 'react'
 
 const cardsArray = [
   {
@@ -78,13 +81,16 @@ const mapArray = [
 
 function App() {
 
+  const {isDarkMode, handleChangeDarkMode} = useContext(ThemeContext)
+  console.log("isDarkMode", isDarkMode);
+
   return (
-    <>
-      <Nav />
+    <Wrapper theme={isDarkMode}>
+      <Nav theme={isDarkMode} action={handleChangeDarkMode} />
       <Header />
       <Section layout='sectionCards'>
         {cardsArray.map((item) => (
-          <Card key={item.Title}>
+          <Card theme={isDarkMode} key={item.Title}>
             <CardHeader title={item.Title}></CardHeader>
             <CardBody bodyText={item.TextContent}></CardBody>
           </Card>
@@ -92,14 +98,14 @@ function App() {
       </Section>
       <Section layout='sectionAbout'>
         {aboutArray.map((item) => (
-          <About key={item.Title1}>
+          <About theme={isDarkMode} key={item.Title1}>
             <AboutHeader title={item.Title1}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
           </About>
         ))}
         {aboutArray.map((item) => (
-          <About layout='reverseFlex' key={item.Title2}>
+          <About layout={isDarkMode ? 'darkFlex' : 'reverseFlex'} key={item.Title2}>
             <AboutHeader title={item.Title2}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
@@ -126,7 +132,7 @@ function App() {
         ))}
       </Section>
       <Footer></Footer>
-    </>
+    </Wrapper>
   )
 }
 

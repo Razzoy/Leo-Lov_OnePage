@@ -23,7 +23,7 @@
             text-align: center;
             align-self: center;
 
-            a {
+            a, button {
                 text-decoration: none;
                 padding: 0.3rem 0.5rem;
                 color: $primary-color;
@@ -33,6 +33,15 @@
                     cursor: pointer;
                     color: white;
                     border-radius: 5px;
+                }
+            }
+            button{
+                color: $dark-page;
+                border: none;
+                background-color: $page-color;
+                font-size: 12px;
+                &:hover{
+                    background-color: $dark-page
                 }
             }
         }
@@ -86,6 +95,38 @@
         }
         h3{
             display:none;
+        }
+    }
+}
+
+.darkModeNav{
+    @extend .navBar;
+    background-color: $dark-page;
+    color: $dark-text;
+    border-bottom-color: $dark-primary;
+
+    ul{
+        li{
+            border-right-color: $dark-primary;
+            a{
+                color: $dark-primary;
+                &:hover{
+                    background-color: $dark-primary;
+                }
+            }
+            button{
+                background-color: $dark-page;
+                color: $dark-text;
+                &:hover{
+                    background-color: $page-color;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+    h3{
+        span{
+            color: $dark-primary;
         }
     }
 }

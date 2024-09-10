@@ -67,6 +67,27 @@
     }
 }
 
+.darkAbout{
+    @extend .aboutStyle;
+}
+.darkFlex{
+    @extend .reverseFlex;
+}
+
+.darkAbout, .darkFlex{
+    @extend .image;
+    border-color: $dark-border;
+    .image, article{
+        border-color: $dark-border;
+        h3{
+            color: $dark-primary;
+        }
+        p{
+            color: $dark-text;
+        }
+    }
+}
+
 @media (max-width: 900px) {
 
     .aboutStyle {

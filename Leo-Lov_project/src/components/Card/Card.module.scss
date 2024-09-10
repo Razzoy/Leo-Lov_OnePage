@@ -27,6 +27,18 @@
     }
 }
 
+.cardDark{
+    @extend .cardContainer;
+    background-color: $dark-secondary;
+    h3{
+        color: $dark-primary;
+    }
+
+    p{
+        color: $dark-text;
+    }
+}
+
 @media (max-width: 900px) {
     .cardContainer {
         max-width: 70%;
