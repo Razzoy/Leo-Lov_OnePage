@@ -24,6 +24,10 @@
     justify-content: space-evenly;
 }
 
+.darkHeader{
+    color: $dark-primary;
+}
+
 @media (max-width: 900px) {
     .sectionStyle {
         margin: 0 4rem;

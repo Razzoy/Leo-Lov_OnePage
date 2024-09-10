@@ -41,6 +41,15 @@
     }
 }
 
+.darkFooter{
+    @extend .footerContainer;
+    background-color: $dark-border;
+    color: $dark-page;
+    img{
+        filter: brightness(8%);
+    }
+}
+
 @media (max-width: 900px) {
     .footerContainer {
         justify-content: none;

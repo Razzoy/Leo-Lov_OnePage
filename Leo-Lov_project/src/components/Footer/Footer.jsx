@@ -1,9 +1,9 @@
 import style from '../Footer/Footer.module.scss'
 
-export function Footer() {
+export function Footer({theme}) {
     return (
         <>
-            <div id='contact' className={style.footerContainer}>
+            <div id='contact' className={theme ? style.darkFooter : style.footerContainer}>
                 <ul>
                     <h3>Adresse</h3>
                     <li>Find os her:</li>

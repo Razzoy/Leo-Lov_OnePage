@@ -16,6 +16,7 @@ import { Footer } from './components/Footer/Footer'
 import { Wrapper } from './Wrapper/Wrapper'
 import {ThemeContext} from './context/ThemeContext'
 import { useContext } from 'react'
+import style from './components/Section/Section.module.scss'
 
 const cardsArray = [
   {
@@ -112,10 +113,10 @@ function App() {
           </About>
         ))}
       </Section>
-      <h2 id='lawyer'>MØD HOLDET</h2>
+      <h2 className={isDarkMode ? style.darkHeader : undefined}>MØD HOLDET</h2>
       <Section layout='sectionTeam'>
         {teamArray.map((item) => (
-          <Team key={item.Src}>
+          <Team theme={isDarkMode} key={item.Src}>
             <TeamHeader image={item.Src}></TeamHeader>
             <TeamBody header={item.Name} text={item.TextContent}></TeamBody>
           </Team>
@@ -123,7 +124,7 @@ function App() {
       </Section>
       <Section>
         {mapArray.map((item) => (
-          <About layout='sectionMap' key={item.MapTitle1}>
+          <About layout={isDarkMode ? 'darkMap' : 'sectionMap'} key={item.MapTitle1}>
             <AboutHeader title={item.MapTitle1}></AboutHeader>
             <AboutText bodyText={item.TextContent1}></AboutText>
             <AboutText bodyText={item.TextContent2}></AboutText>
@@ -131,7 +132,7 @@ function App() {
           </About>
         ))}
       </Section>
-      <Footer></Footer>
+      <Footer theme={isDarkMode}/>
     </Wrapper>
   )
 }

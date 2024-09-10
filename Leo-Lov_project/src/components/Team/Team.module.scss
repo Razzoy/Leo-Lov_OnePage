@@ -6,7 +6,7 @@
         display: flex;
         flex-direction: column;
         max-width: 14vw;
-        height: 25rem;
+        height: 47vh;
         padding: 1rem;
         border-bottom: 0.5rem solid $secondary-color;
         margin-bottom: 10rem;
@@ -36,12 +36,29 @@
             margin-top: 1rem;
         }
     }
+
+    .darkTeam{
+        @extend .teamCards;
+        border-bottom-color: $dark-border;
+        img{
+            border-color: $dark-border;
+        }
+        h4{
+            color: $dark-primary;
+        }
+        p{
+            color: $dark-text;
+        }
+    }
 }
+
+
 
 @media (max-width: 900px) {
     .teamCards {
         max-width: 30vw !important;
         margin: 0 auto 2rem !important;
+        height: 35vh !important;
 
         img {
             width: 80% !important;
@@ -55,7 +72,6 @@
         }
 
         h4 {
-            color: $primary-color;
             margin-top: 3rem;
         }
 
