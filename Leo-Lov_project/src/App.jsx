@@ -15,7 +15,7 @@ import { Map } from './components/Map/Map'
 import { Footer } from './components/Footer/Footer'
 import { Wrapper } from './Wrapper/Wrapper'
 import {ThemeContext} from './context/ThemeContext'
-import { useContext } from 'react'
+import { useContext } from 'react'  
 import style from './components/Section/Section.module.scss'
 
 const cardsArray = [
